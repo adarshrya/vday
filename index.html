@@ -1,8 +1,27 @@
 <html>
-  <head>
-    
-  </head>
-  <body>
-    Dummy Test
-  </body>
+
+<head>
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+</head>
+
+<body>
+  Dummy Test
+  <button onclick="Move(this)" onmouseover="Move(this)">Yes</button>
+  <button>No</button>
+</body>
+<script>
+  function Move(element) {
+    var Top = getRndInteger(10, 90);
+    var left = getRndInteger(10, 90);
+    element.style.position = "absolute";
+    element.style.top = Top + '%';
+    // element.style.bottom=  "100px";
+    element.style.left = left + '%';
+    // element.style.right=  "100px";
+  }
+  function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+</script>
+
 </html>
